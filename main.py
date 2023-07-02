@@ -58,18 +58,16 @@ def decrypt_file(key, in_filename, out_filename=None, chunksize=24*1024):
 				outfile.write(unpadded_chunk)
 
 '''
-If you already have an encrypted file and an encryption key,
-replace the decryption_key with your key and only run the
-decrypt_file() function below.
+To decrypt a file with an encryption key, replace the
+decryption_key with your key and only run the decrypt_file()
+function.
 '''
 encryption_key = generate_key()
 print(f"Encryption Key: {encryption_key}")
 
 '''
-Here is some example usage of this program. You should only
-run either the encrypt_file() or decrypt_file() function at
-any time. Make sure to save the encryption key is a secure
-place!
+Only run either the encrypt_file() or decrypt_file() function
+at any time. Save the encryption key is a secure place!
 '''
 encrypt_file(encryption_key, 'file.txt')
 decrypt_file(encryption_key, 'file.txt.encrypted')
